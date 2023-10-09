@@ -4,7 +4,7 @@ import { postFormData } from '@/utils/client';
 import { ChangeEvent, SyntheticEvent, useState } from "react";
 import styles from './page.module.css';
 
-const formHandlerUrl = '/api/contact';
+const formHandlerUrl = '/demos/contact/api';
 
 export default function Form() {
 

@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Starter Kit
 
-## Getting Started
+This is a Starter Kit for the Digital Product Jam course. It provides a configuration of the [Next.js](https://nextjs.org/) framework, and a number of examples of common patterns and components.
 
-First, run the development server:
+See [the course reference materials for frameworks](https://github.com/digital-product-jam-2024/course/blob/main/reference/frameworks.md) for futher reading on Next.js and React, and in general, other [reference materials](https://github.com/digital-product-jam-2024/course/tree/main/reference) to help you with various technologies and aspects of web development.
+
+# How to use the Starter Kit
+
+First up, you should be using GitHub's template functionality to create your own code repository using this repository as a starting point. [See ther GitHub documentation on creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+
+Once you have created your own repository from this template, you can use Git to clone the repository to your local machine. See our [reference material on Git for further details](https://github.com/digital-product-jam-2024/course/blob/main/reference/git.md).
+
+When you have a local copy of your repository, you can proceed with the next steps in this document.
+
+# Getting Started
+
+Ensure you have a local copy of the repository, and, in your terminal, navigate to the root of the repository.
+
+## Install the dependencies
+
+The codebase has libraries it depends on to run - these are refered to as "dependencies". You need to install these dependencies before you can run the codebase. To install the dependencies, run the following command in your terminal:
+
+```bash
+npm install
+```
+
+## Run the development server
+
+The codebase uses a development server to run the code. This is a server that runs on your local machine, and allows you to view the code in your browser. To run the development server, run the following command in your terminal:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# View the application in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Once the server is running, you can view the application in your browser. To do this, open Chrome (or Chromium), and type the following into the address bar:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+http://localhost:3000
+```
 
-## Learn More
+# Other commands you can run
 
-To learn more about Next.js, take a look at the following resources:
+The codebase is set up with a number of commands you can run. These are defined in the `package.json` file, in the `scripts` section. The following are available:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Lint your code to detect style and some syntax errors**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+npm run lint
+```
 
-## Deploy on Vercel
+**Compile a production build of your app**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Run the compiled production build of the server**
+
+```bash
+npm run start
+```
+
+**Print out some system info related to your server**
+
+```bash
+npm run info
+```
+
+# Environment variables
+
+Environment variables provide a way to pass configuration to your application without including configuration values directly in the codebase. This is useful for things like API keys, or other sensitive information that you don't want to be publicly available.
+
+- [Read about Environment variables in Next.js and Vercel here](https://nextjs.org/docs/pages/building-your-application/configuring/environment-variables)
+- [See this video we created on Environment variables](https://youtu.be/f4sXU4d3Zd8)
+
+# Helpers
+
+## CSS Debug
+
+Whent he Environment Variable `CSS_DEBUG` is set to `css_debug`, then additional visual outlines will appear in the UI to help you debug CSS issues.
+
+# Demos
+
+See the demos page for more information.

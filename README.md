@@ -83,4 +83,18 @@ Whent he Environment Variable `CSS_DEBUG` is set to `css_debug`, then additional
 
 # Demos
 
-See the demos page for more information.
+Go to the demos page on the running app to use the demos. The demos are provided to provide real examples of common patterns and components. You can use these as a starting point for your own work.
+
+## Contact Form
+
+This demonstrates how to implement an HTML form. Several fundamental concepts are demonstrated here:
+
+- Using a react component to render a form
+- Using the browser's native form validation
+- Overriding the default submit behaviour of a form in JavaScript
+- Using the `fetch` API to send form data to a server
+- Implementing a server API endpoint to receive data from the form
+- Sending an email with information from the form
+- After handling the data and the email on the server, responding back to the client with a status message
+
+If you understand this example well, you have a good start on most of the fundamentals of web development.

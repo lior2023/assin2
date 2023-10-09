@@ -24,6 +24,19 @@ The codebase has libraries it depends on to run - these are refered to as "depen
 npm install
 ```
 
+## Configure local environment variables
+
+See the section on environment variables below for more explanation on this step. For now, just run the command from the root of the project.
+
+```bash
+cp .env.local.template .env.local
+```
+
+Then, open the `.env.local` file in your code editor, and update the values as follows:
+
+```bash
+```
+
 ## Run the development server
 
 The codebase uses a development server to run the code. This is a server that runs on your local machine, and allows you to view the code in your browser. To run the development server, run the following command in your terminal:

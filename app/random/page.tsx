@@ -14,7 +14,7 @@ export default function App() {
   const { data: session, isLoading: sessionLoading, isError: sessionError } = useSession();
   const [teams, setTeams] = useState<AssignedTeam[]>([]);
   const [assignedStudents, setAssignedStudents] = useState<number[]>([]);
-  const [currentTeamMembers, setCurrentTeamMembers] = useState<AssignedTeam | undefined>();
+  const [currentTeamMembers, setCurrentTeamMembers] = useState<number[]>([]);
 
   if (dataLoading) return <Message content="Loading..." />
   if (dataError) return <Message content="An error occured..." />

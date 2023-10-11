@@ -1,3 +1,4 @@
+import { FormEvent } from 'react';
 import {
   BACKGROUND_COLORS,
   BUTTON_DISABLED_ACTION_TEXT,
@@ -10,7 +11,7 @@ import styles from '../../page.module.css';
 interface Props {
   id: string;
   text: string;
-  handler: (event: Event) => void;
+  handler: (event: FormEvent) => void;
   disabled: boolean;
   cycleBackground: true | false | null;
 }
@@ -28,7 +29,7 @@ function setBackgroundColor(cycleBackground: true | false | null) {
 export default function SessionAction({ id, text, handler, disabled, cycleBackground }: Props) {
   const buttonText = disabled ? BUTTON_DISABLED_ACTION_TEXT : text;
 
-  function actionHandler(event: Event) {
+  function actionHandler(event: FormEvent<HTMLButtonElement>) {
     event.preventDefault();
     if (cycleBackground !== null) setBackgroundColor(cycleBackground);
     handler(event);

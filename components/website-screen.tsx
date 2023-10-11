@@ -4,11 +4,11 @@ import type { ReactNode } from 'react';
 import '../globals.css';
 
 interface Props {
-  direction: 'rtl' | 'ltr';
-  children: ReactNode[]
+  children: ReactNode[] | ReactNode;
+  direction?: 'rtl' | 'ltr';
 }
 
-export default function WebsiteScreen({ direction, children }: Props) {
+export default function WebsiteScreen({ direction = 'ltr', children }: Props) {
   return (
     <div dir={direction}>
       <Navbar />

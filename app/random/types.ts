@@ -40,12 +40,12 @@ export interface PromptIdea {
   description: string;
 }
 
-interface _Session {
-  id:number;
+export interface Session {
+  id: number;
   is_open: boolean;
 }
 
-export type Session = _Session | undefined;
+export type OptionalSession = Session | undefined;
 
 export interface Data {
   groups: Group[];
@@ -54,7 +54,7 @@ export interface Data {
   distribution: Distribution[];
   prompt_companies: PromptCompany[];
   prompt_ideas: PromptIdea[];
-  sessions: Session[];
+  session: Session;
 }
 
 export interface StateDescriptor {
@@ -73,4 +73,4 @@ export type SetAssignedStudents = Dispatch<SetStateAction<[] | number[]>>;
 
 export type SetCurrentTeamMembers = Dispatch<SetStateAction<[] | number[]>>;
 
-export type TransitionStateFunction = (state: number) => number;
+export type TransitionStateFunction = (state: number) => void;

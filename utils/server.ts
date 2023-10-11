@@ -4,6 +4,8 @@ import nodemailer, { TransportOptions } from 'nodemailer';
 import { SUPABASE_SERVICE_KEY, SUPABASE_URL } from '@/constants';
 import { createClient as createDatabaseClient } from '@supabase/supabase-js';
 
+export const databaseClient = getDatabaseClient();
+
 export function getDatabaseClient() {
   return createDatabaseClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
 }

@@ -111,3 +111,16 @@ This demonstrates how to implement an HTML form. Several fundamental concepts ar
 - After handling the data and the email on the server, responding back to the client with a status message
 
 If you understand this example well, you have a good start on most of the fundamentals of web development.
+
+## Random Team Generator
+
+This is a full app that builds random teams and product ideas out of this year's students! It demonstrates the following concepts:
+
+- Working with data in a database
+- Managing UI state with an ad hoc state machine
+- Running almost all code on the client (see usage of 'use client' throughout)
+- Right-to-left (RTL) layout for Hebrew
+- Nested component organization
+- Logic in Javascript for the "business rules" of the application (shuffling, picking from remaining students, etc.)
+
+Review the other demos before reviewing this one.

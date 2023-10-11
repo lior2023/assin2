@@ -39,21 +39,16 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* what is :root? https://developer.mozilla.org/en-US/docs/Web/CSS/:root */
 :root {
-  --font-family: "SF Pro Text",
-    "SF Pro Icons",
-    "Helvetica Neue",
-    "Helvetica",
-    "Arial",
-    sans-serif;
   --primary: rgb(5, 190, 113);
   --secondary: rgb(210, 166, 234);
   --primary-variant:  rgb(5, 181, 108);
-  --link: rgb(58, 161, 250);
+  --link: rgb(0, 135, 252);
   --light: rgb(255, 255, 255);
   --dark: rgb(45, 43, 43);
   --debug: rgb(239, 6, 72);
   --gray: rgb(223, 222, 223);
-  --form-primary: rgb(234, 199, 155);
+  --demo-one: rgb(244, 242, 167);
+  --demo-two: rgb(168, 239, 245);
 }
 
 /* a helper for debugging CSS. See the README for more information. */
@@ -68,6 +63,7 @@ body {
 }
 
 body {
+  font-family: var(--font-ubuntu);
   color: var(--dark);
   background-color: var(--light);
 }
@@ -76,7 +72,11 @@ a {
   color: var(--link);
 }
 
-input, textarea, select, button {
+a.button {
+  text-decoration: none;
+}
+
+input, textarea, select, button, a.button {
   border: 1px solid var(--gray);
   padding: 0.25rem;
 }
@@ -90,7 +90,7 @@ input, textarea, select {
   margin-bottom: 1rem;
 }
 
-button {
+button, a.button {
   font-size: 1.125rem;
   background-color: var(--link);
   color: var(--light);
@@ -184,6 +184,19 @@ button {
 
 /* START HELPER ATTRIBUTES */
 
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.fullheight {
+  height: 100vh;
+}
+
+.fullwidth {
+  width: 100vw;
+}
+
 .center {
   display: flex;
   justify-content: center;
@@ -211,6 +224,10 @@ button {
 
 .padding-1 {
   padding: 1rem;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 1rem;
 }
 
 .text-sm {
@@ -255,5 +272,9 @@ button {
 /* END FANCY STUFF */
 
 .demo-contactForm {
-  background-color: var(--form-primary);
+  background-color: var(--demo-one);
+}
+
+.demo-randomTeamGenerator {
+  background-color: var(--demo-two);
 }

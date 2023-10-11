@@ -7,13 +7,22 @@ export const DEMOS_ENABLED = process.env.DEMOS_ENABLED === 'true' ? true : false
 export const DEMOS = [
   {
     title: 'Contact Form',
-    slug: 'contact',
+    slug: '/demos/contact',
     description: 'A simple example of a contact form that sends an email. Notice that this page runs client side, and submits the form data to a server side handler in order to actually email the message.',
     cssClass: 'demo-contactForm',
+  },
+  {
+    title: 'Random Team Generator',
+    slug: '/random',
+    description: 'An example of a more complex application that builds random teams and product ideas from this year\'s students.',
+    cssClass: 'demo-randomTeamGenerator',
   }
 ];
 
-export const EMAIL_ADDRESS=process.env.EMAIL_ADDRESS
-export const EMAIL_PASSWORD=process.env.EMAIL_PASSWORD
-export const EMAIL_HOST=process.env.EMAIL_HOST
-export const EMAIL_PORT=process.env.EMAIL_PORT
+export const EMAIL_ADDRESS = process.env.EMAIL_ADDRESS || ''
+export const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD || ''
+export const EMAIL_HOST = process.env.EMAIL_HOST || ''
+export const EMAIL_PORT = process.env.EMAIL_PORT || 587
+
+export const SUPABASE_URL = process.env.SUPABASE_URL || ''
+export const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY || ''

@@ -1,9 +1,11 @@
+import WebsiteScreen from '@/components/website-screen';
 import { COURSE_WELCOME_TEXT } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
   return (
+    <WebsiteScreen>
     <div className="grid">
       <div className="center padding-2 text-xl">
         <span>
@@ -47,5 +49,6 @@ export default function Home() {
         </p>
       </div>
     </div>
+    </WebsiteScreen>
   )
 }

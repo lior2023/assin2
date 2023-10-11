@@ -1,6 +1,27 @@
 import { EMAIL_ADDRESS, EMAIL_HOST, EMAIL_PASSWORD, EMAIL_PORT } from '@/constants';
 import nodemailer, { TransportOptions } from 'nodemailer';
 
+import { SUPABASE_SERVICE_KEY, SUPABASE_URL } from '@/constants';
+import { createClient as createDatabaseClient } from '@supabase/supabase-js';
+
+export function getDatabaseClient() {
+  return createDatabaseClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
+}
+
+export function getEmailTransport() {
+  const transport = nodemailer.createTransport({
+    host: EMAIL_HOST,
+    port: EMAIL_PORT,
+    // this doesnt mean it is not secure. see https://nodemailer.com/smtp/
+    secure: false,
+    auth: {
+      user: EMAIL_ADDRESS,
+      pass: EMAIL_PASSWORD,
+    },
+  } as TransportOptions);
+  return transport;
+}
+
 export async function sendEmail(data: Record<string, string>) {
   const transport = getEmailTransport();
   const message = {
@@ -19,18 +40,4 @@ export async function sendEmail(data: Record<string, string>) {
     console.log(error)
   }
   return success;
-}
-
-export function getEmailTransport() {
-  const transport = nodemailer.createTransport({
-    host: EMAIL_HOST,
-    port: EMAIL_PORT,
-    // this doesnt mean it is not secure. see https://nodemailer.com/smtp/
-    secure: false,
-    auth: {
-      user: EMAIL_ADDRESS,
-      pass: EMAIL_PASSWORD,
-    },
-  } as TransportOptions);
-  return transport;
 }

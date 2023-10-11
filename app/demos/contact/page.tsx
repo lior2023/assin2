@@ -1,8 +1,9 @@
 'use client';
-import { type ContactFormResponse } from '@/types';
-import { postFormData } from '@/utils/client';
-import { ChangeEvent, SyntheticEvent, useState } from "react";
+
+import { useState, type ChangeEvent, type SyntheticEvent } from 'react';
 import styles from './page.module.css';
+import { type ContactFormResponse } from './types';
+import { postFormData } from './utils';
 
 const formHandlerUrl = '/demos/contact/api';
 

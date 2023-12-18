@@ -50,3 +50,22 @@ export const EMAIL_PORT = process.env.EMAIL_PORT || 587
 
 export const SUPABASE_URL = process.env.SUPABASE_URL || ''
 export const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY || ''
+
+export const GOOGLE_CREDENTIALS = {
+  client_id: process.env.GOOGLE_CLIENT_ID,
+  client_email: process.env.GOOGLE_CLIENT_EMAIL,
+  project_id: process.env.GOOGLE_PROJECT_ID,
+  private_key: process.env.GOOGLE_PRIVATE_KEY
+};
+
+export const GOOGLE_DRIVE_DIRECTORY = process.env.GOOGLE_DRIVE_DIRECTORY;
+export const GOOGLE_SHEET = {
+  'id': process.env.GOOGLE_SHEET_ID,
+  'range': process.env.GOOGLE_SHEET_RANGE
+};
+
+export const GOOGLE_SCOPES = [
+  'https://www.googleapis.com/auth/drive',
+  'https://www.googleapis.com/auth/drive.file',
+  'https://www.googleapis.com/auth/spreadsheets'
+];

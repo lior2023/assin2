@@ -18,30 +18,6 @@ export const DEMOS = [
     cssClass: 'demo-viz',
   },
   {
-    title: 'Authentication',
-    slug: '/demos/03_auth',
-    description: 'A simple example of authenticating users with email-based login. We only allow login of students by validating email against a table of known student emails.',
-    cssClass: 'demo-authentication',
-  },
-  {
-    title: 'Read from and write to a database',
-    slug: '/demos/database',
-    description: 'TODO: A simple example of working with data and content from a database.',
-    cssClass: 'demo-database',
-  },
-  {
-    title: 'Read from and write to Google Sheets',
-    slug: '/demos/sheets',
-    description: 'TODO: A simple example of working with data and content from a Google Sheets as a database.',
-    cssClass: 'demo-sheets',
-  },
-  {
-    title: 'Read from and write to Google Drive',
-    slug: '/demos/drive',
-    description: 'TODO: A simple example of working with files stored in Google Drive.',
-    cssClass: 'demo-drive',
-  },
-  {
     title: 'Random Team Generator',
     slug: '/random',
     description: 'An example of a fully functional application that builds random teams and product ideas from this year\'s students.',

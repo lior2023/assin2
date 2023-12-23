@@ -275,6 +275,10 @@ button, a.button {
   background-color: var(--demo);
 }
 
+.demo-authentication {
+  background-color: var(--demo);
+}
+
 .demo-database {
   background-color: var(--demo);
 }
@@ -293,4 +297,9 @@ button, a.button {
 
 .demo-randomTeamGenerator {
   background-color: var(--demo-random);
+}
+
+.demo-notes {
+  background-color: var(--demo);
+  font-size: 0.875rem;
 }

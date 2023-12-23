@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Message from './components/partials/message';
 import { getCurrentComponent } from './components/utils';
-import { useData, useSession } from './hooks';
+import { useData } from './hooks';
 import { AssignedTeam } from './types';
 
 export default function App() {
@@ -11,7 +11,6 @@ export default function App() {
   const [currentStateId, transitionToStateFn] = useState(0);
 
   const { data, isLoading: dataLoading, isError: dataError } = useData();
-  const { data: session, isLoading: sessionLoading, isError: sessionError } = useSession();
   const [teams, setTeams] = useState<AssignedTeam[]>([]);
   const [assignedStudents, setAssignedStudents] = useState<number[]>([]);
   const [currentTeamMembers, setCurrentTeamMembers] = useState<number[]>([]);
@@ -22,7 +21,6 @@ export default function App() {
 
   return getCurrentComponent(
     currentStateId,
-    session,
     data,
     teams,
     setTeams,

@@ -1,4 +1,4 @@
-import { ContactFormResponse } from "@/app/demos/contact/types";
+import { ContactFormResponse } from "@/app/demos/01_contact/types";
 
 export async function postFormData(data: Record<string, string>, url: string): Promise<ContactFormResponse> {
   const response = await fetch(url, {

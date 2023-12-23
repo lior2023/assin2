@@ -1,5 +1,5 @@
 import { STATE_DESCRIPTORS } from '../constants';
-import type { AssignedTeam, Data, OptionalSession, SetAssignedStudents, SetCurrentTeamMembers, SetTeams, TransitionStateFunction } from '../types';
+import type { AssignedTeam, Data, SetAssignedStudents, SetCurrentTeamMembers, SetTeams, TransitionStateFunction } from '../types';
 import Message from './partials/message';
 import SelectConcept from './screens/select-concept';
 import SelectStudents from './screens/select-students';
@@ -9,7 +9,6 @@ import Start from './screens/start';
 
 export function getCurrentComponent(
   currentStateId: number,
-  session: OptionalSession,
   data: Data,
   teams: AssignedTeam[],
   setTeams: SetTeams,

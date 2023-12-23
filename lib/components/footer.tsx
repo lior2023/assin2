@@ -1,4 +1,4 @@
-import { COURSE_CREDITS } from '@/constants';
+import { COURSE_CREDITS } from '@/lib/config';
 
 export default function Footer() {
   return (

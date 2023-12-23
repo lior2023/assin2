@@ -4,21 +4,12 @@ import {
   multiPartFormParser,
   uploadAssetsToFolder,
   writeDataToGoogleSheet
-} from "@/utils/server";
+} from "@/lib/utils/server";
 import { type NextRequest } from "next/server";
-
-// this is how we create route-specific config for next
-// by default, next parses request body objects as JSON
-// that makes sense for most APIs
-// but not for handling multipart form data
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
 
 export async function POST(request: NextRequest) {
   // get the data from the request
+  const formData = await request.formData()
   const { fields, files } = await multiPartFormParser(request);
   const { email, name, comment } = fields;
 

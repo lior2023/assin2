@@ -1,6 +1,5 @@
 export const API_BASE = '/random/api';
 export const API_DATA_ENDPOINT = `${API_BASE}/data`;
-export const API_SESSIONS_ENDPOINT = `${API_BASE}/sessions`;
 export const API_TEAMS_ENDPOINT = `${API_BASE}/teams`;
 export const DEFAULT_BACKGROUND_COLOR = '#FFFFFF';
 export const BACKGROUND_COLORS = [

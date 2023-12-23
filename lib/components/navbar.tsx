@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { APP_NAME, COURSE_GITHUB, DEMOS_ENABLED } from '../constants';
+import { APP_NAME, COURSE_GITHUB, DEMOS_ENABLED } from '../config';
 
 export default function Navbar() {
   return (

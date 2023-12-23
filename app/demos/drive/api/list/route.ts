@@ -1,4 +1,4 @@
-import { GOOGLE_DRIVE_DIRECTORY } from "../../config";
+import { GOOGLE_DRIVE_DIRECTORY } from "@/lib/config";
 import { client } from "../../drive";
 
 export default async function handler(req, res) {

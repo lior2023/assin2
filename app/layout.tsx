@@ -1,7 +1,7 @@
+import '@/globals.css';
 import type { Metadata } from 'next';
 import { Ubuntu } from 'next/font/google';
 import type { ReactNode } from 'react';
-import '../globals.css';
 
 // Next.js has built in support for Google Fonts.
 // https://nextjs.org/docs/app/api-reference/components/font

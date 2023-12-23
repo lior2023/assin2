@@ -40,13 +40,6 @@ export interface PromptIdea {
   description: string;
 }
 
-export interface Session {
-  id: number;
-  is_open: boolean;
-}
-
-export type OptionalSession = Session | undefined;
-
 export interface Data {
   groups: Group[];
   students: Student[];
@@ -54,7 +47,6 @@ export interface Data {
   distribution: Distribution[];
   prompt_companies: PromptCompany[];
   prompt_ideas: PromptIdea[];
-  session: Session;
 }
 
 export interface StateDescriptor {

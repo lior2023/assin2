@@ -5,14 +5,15 @@ import styles from './page.module.css';
 import { type ContactFormResponse } from './types';
 import { postFormData } from './utils';
 
-const formHandlerUrl = '/demos/contact/api';
+const formHandlerUrl = '/demos/01_contact/api';
 
-export default function Form() {
+export default function ContactForm() {
 
   // See information on typing events on forms in React here:
   // https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/forms_and_events/
 
   const [formData, setFormData] = useState({name: '', email: '', message: ''});
+  
   const [submissionResponse, setSubmissionResponse] = useState<ContactFormResponse | undefined>(undefined);
 
   function handleChange(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
@@ -32,6 +33,18 @@ export default function Form() {
 
   return (
     <div className="content">
+      <div className="demo-notes padding-1">
+        <p>
+          <strong>What is happening in this example?</strong>
+        </p>
+        <ul>
+          <li>The user is not able to submit the form without completing all required form fields.</li>
+          <li>This form renders on the client, and, submits the form data to a server API endpoint.</li>
+          <li>The server API endpoint receives the form data and uses it to send an email sends an email.</li>
+          <li>After the email send is handled, the server API endpoint returns data as a response to the client.</li>
+          <li>When the client receives the response from the server, it renders the response in the UI.</li>
+        </ul>
+      </div>
       <h1>Send a message</h1>
       {
         submissionResponse ?

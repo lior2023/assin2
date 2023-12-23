@@ -7,9 +7,21 @@ export const DEMOS_ENABLED = process.env.DEMOS_ENABLED === 'true' ? true : false
 export const DEMOS = [
   {
     title: 'Contact form',
-    slug: '/demos/contact',
-    description: 'A simple example of a contact form that sends an email. Notice that this page runs client side, and submits the form data to a server side handler in order to actually email the message.',
+    slug: '/demos/01_contact',
+    description: 'A simple example of a contact form that sends an email. In this case, the contact form sends an email to the email entered in the form.',
     cssClass: 'demo-contactForm',
+  },
+  {
+    title: 'Basic Data Visualization',
+    slug: '/demos/02_viz',
+    description: 'A simple example of reading data from a public API and displaying it in a chart.',
+    cssClass: 'demo-viz',
+  },
+  {
+    title: 'Authentication',
+    slug: '/demos/03_auth',
+    description: 'A simple example of authenticating users with email-based login. We only allow login of students by validating email against a table of known student emails.',
+    cssClass: 'demo-authentication',
   },
   {
     title: 'Read from and write to a database',
@@ -19,7 +31,7 @@ export const DEMOS = [
   },
   {
     title: 'Read from and write to Google Sheets',
-    slug: '/demos/drive',
+    slug: '/demos/sheets',
     description: 'TODO: A simple example of working with data and content from a Google Sheets as a database.',
     cssClass: 'demo-sheets',
   },
@@ -27,12 +39,6 @@ export const DEMOS = [
     title: 'Read from and write to Google Drive',
     slug: '/demos/drive',
     description: 'TODO: A simple example of working with files stored in Google Drive.',
-    cssClass: 'demo-drive',
-  },
-  {
-    title: 'Visualize data',
-    slug: '/demos/viz',
-    description: 'TODO: A simple example of read data and displaying it visually.',
     cssClass: 'demo-drive',
   },
   {

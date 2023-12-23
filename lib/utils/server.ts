@@ -1,11 +1,11 @@
-import { EMAIL_ADDRESS, EMAIL_HOST, EMAIL_PASSWORD, EMAIL_PORT, SUPABASE_SERVICE_KEY, SUPABASE_URL } from '@/constants';
+import { EMAIL_ADDRESS, EMAIL_HOST, EMAIL_PASSWORD, EMAIL_PORT, SUPABASE_SERVICE_KEY, SUPABASE_URL } from '@/lib/config';
 import { createClient as createDatabaseClient } from '@supabase/supabase-js';
 import formidable from 'formidable';
 import * as fs from 'fs';
 import { google } from 'googleapis';
 import { NextRequest } from 'next/server';
 import nodemailer, { TransportOptions } from 'nodemailer';
-import { GOOGLE_CREDENTIALS, GOOGLE_DRIVE_DIRECTORY, GOOGLE_SCOPES } from '../constants';
+import { GOOGLE_CREDENTIALS, GOOGLE_DRIVE_DIRECTORY, GOOGLE_SCOPES } from '../config';
 
 export const databaseClient = getDatabaseClient();
 

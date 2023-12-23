@@ -1,5 +1,5 @@
+import '@/globals.css';
 import type { ReactNode } from 'react';
-import '../globals.css';
 
 interface Props {
   direction: 'rtl' | 'ltr';

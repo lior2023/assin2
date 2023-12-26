@@ -32,10 +32,7 @@ See the section on environment variables below for more explanation on this step
 cp .env.local.template .env.local
 ```
 
-Then, open the `.env.local` file in your code editor, and update the values as follows:
-
-```bash
-```
+Then, open the `.env.local` file in your code editor, and update the values with real data. We can provide some configuration for you for ease of use - we will update in class.
 
 ## Run the development server
 

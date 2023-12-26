@@ -11,7 +11,7 @@ interface Props {
 
 export default function TeamList({ teams, students, groups }: Props) {
   return (
-    <div>
+    <div className={styles.teamGrid}>
       {teams.map((team, idx) => {
         return (
           <div key={idx} className={styles.team}>

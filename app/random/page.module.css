@@ -45,6 +45,11 @@
 .studentGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-bottom: 150px;
+}
+
+.teamGrid {
+  padding-bottom: 150px;
 }
 
 .groupName {

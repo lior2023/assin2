@@ -1,6 +1,6 @@
 export const APP_NAME = 'Starter Kit';
 export const COURSE_GITHUB = 'https://github.com/digital-product-jam-2024';
-export const COURSE_WELCOME_TEXT = 'Hey there, and welcome! Read the source code, and navigate to the demos.'
+export const COURSE_WELCOME_TEXT = 'Hey there, and welcome! Read the source code, and navigate to the demos.';
 export const COURSE_CREDITS = 'Digital Product Jam 2023-2024';
 
 export const DEMOS_ENABLED = process.env.DEMOS_ENABLED === 'true' ? true : false;
@@ -31,13 +31,14 @@ export const DEMOS = [
   }
 ];
 
-export const EMAIL_ADDRESS = process.env.EMAIL_ADDRESS || ''
-export const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD || ''
-export const EMAIL_HOST = process.env.EMAIL_HOST || ''
-export const EMAIL_PORT = process.env.EMAIL_PORT || 587
+export const EMAIL_ADDRESS = process.env.EMAIL_ADDRESS || '';
+export const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD || '';
+export const EMAIL_HOST = process.env.EMAIL_HOST || '';
+export const EMAIL_PORT = process.env.EMAIL_PORT || 587;
 
-export const SUPABASE_URL = process.env.SUPABASE_URL || ''
-export const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY || ''
+export const PUBLIC_SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+export const PUBLIC_SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+export const PRIVATE_SUPABASE_SERVICE_KEY = process.env.PRIVATE_SUPABASE_SERVICE_KEY || '';
 
 export const GOOGLE_CREDENTIALS = {
   client_id: process.env.GOOGLE_CLIENT_ID,

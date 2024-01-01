@@ -1,11 +1,11 @@
-import { EMAIL_ADDRESS, EMAIL_HOST, EMAIL_PASSWORD, EMAIL_PORT, SUPABASE_SERVICE_KEY, SUPABASE_URL } from '@/lib/config';
+import { EMAIL_ADDRESS, EMAIL_HOST, EMAIL_PASSWORD, EMAIL_PORT, PRIVATE_SUPABASE_SERVICE_KEY, PUBLIC_SUPABASE_URL } from '@/lib/config';
 import { createClient as createDatabaseClient } from '@supabase/supabase-js';
 import nodemailer, { TransportOptions } from 'nodemailer';
 
 export const databaseClient = getDatabaseClient();
 
 export function getDatabaseClient() {
-  return createDatabaseClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
+  return createDatabaseClient(PUBLIC_SUPABASE_URL, PRIVATE_SUPABASE_SERVICE_KEY);
 }
 
 export function getEmailTransport() {

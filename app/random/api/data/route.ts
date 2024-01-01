@@ -3,6 +3,8 @@ import { type NextRequest } from 'next/server';
 import { makeTeamDistribution } from '../../logic';
 import type { Group, PromptCompany, PromptIdea, Student, Team } from '../../types';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: NextRequest) {
   const { data: students } = await databaseClient.from('student').select(`id, name, group (id, name)`) as { data: Student[] };
   const { data: groups } = await databaseClient.from('group').select(`id, name`) as { data: Group[] };

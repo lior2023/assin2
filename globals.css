@@ -271,7 +271,7 @@ button, a.button {
 }
 /* END FANCY STUFF */
 
-.demo-contactForm {
+.demo-contactForm, .demo-blank {
   background-color: var(--demo);
 }
 

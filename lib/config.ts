@@ -6,6 +6,12 @@ export const COURSE_CREDITS = 'Digital Product Jam 2023-2024';
 export const DEMOS_ENABLED = process.env.DEMOS_ENABLED === 'true' ? true : false;
 export const DEMOS = [
   {
+    title: 'Blank',
+    slug: '/demos/00_blank',
+    description: 'A minimal blank slate.',
+    cssClass: 'demo-blank',
+  },
+  {
     title: 'Contact form',
     slug: '/demos/01_contact',
     description: 'A simple example of a contact form that sends an email. In this case, the contact form sends an email to the email entered in the form.',

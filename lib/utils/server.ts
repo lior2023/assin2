@@ -2,8 +2,6 @@ import { EMAIL_ADDRESS, EMAIL_HOST, EMAIL_PASSWORD, EMAIL_PORT, PRIVATE_SUPABASE
 import { createClient as createDatabaseClient } from '@supabase/supabase-js';
 import nodemailer, { TransportOptions } from 'nodemailer';
 
-export const databaseClient = getDatabaseClient();
-
 export function getDatabaseClient() {
   return createDatabaseClient(PUBLIC_SUPABASE_URL, PRIVATE_SUPABASE_SERVICE_KEY);
 }

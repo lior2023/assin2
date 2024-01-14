@@ -40,6 +40,8 @@ export const PUBLIC_SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
 export const PUBLIC_SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
 export const PRIVATE_SUPABASE_SERVICE_KEY = process.env.PRIVATE_SUPABASE_SERVICE_KEY || '';
 
+export const SUPABASE_ENABLED = PUBLIC_SUPABASE_URL && PUBLIC_SUPABASE_ANON_KEY && PRIVATE_SUPABASE_SERVICE_KEY ? true : false;
+
 export const GOOGLE_CREDENTIALS = {
   client_id: process.env.GOOGLE_CLIENT_ID,
   client_email: process.env.GOOGLE_CLIENT_EMAIL,

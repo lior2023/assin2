@@ -1,11 +1,16 @@
-import { databaseClient } from '@/lib/utils/server';
+import { SUPABASE_ENABLED } from '@/lib/config';
+import { getDatabaseClient } from '@/lib/utils/server';
 import { type NextRequest } from 'next/server';
 import { makeTeamDistribution } from '../../logic';
 import type { Group, PromptCompany, PromptIdea, Student, Team } from '../../types';
 
 export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
+export const revalidate = 0;
 
 export async function GET(request: NextRequest) {
+  if (!SUPABASE_ENABLED) return Response.json({ error: 'Supabase is not enabled.' });
+  const databaseClient = getDatabaseClient();
   const { data: students } = await databaseClient.from('student').select(`id, name, group (id, name)`) as { data: Student[] };
   const { data: groups } = await databaseClient.from('group').select(`id, name`) as { data: Group[] };
   const { data: prompt_companies } = await databaseClient.from('prompt_company').select(`id, name`) as { data: PromptCompany[] };

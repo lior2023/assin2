@@ -17,7 +17,7 @@ a {font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 body {
   background-color: #FFE13B;
 }
-h2 {
+p {
   font: cursiv;
   font-size: 40px;
   position: fixed;
@@ -27,13 +27,7 @@ h2 {
   
 }
 
-img{
-  display: block;
-  width: 800px;
-  margin: 0 auto;
-  transition: 0.3s;
 
-}
 button {
   border: none;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -46,13 +40,15 @@ button {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+  left: 20px;
+  top: 20px;
 }
 button {
   background-color: rgb(247, 242, 212); 
   color: black; 
   border: 2px solid #7b4213;
   position: fixed;
-  left: 6px;
+
   
 }
 
@@ -66,5 +62,12 @@ button:hover {
 iframe {
   position: fixed;
   left: 1100px;
-  top: 87px; 
+  top: 170px; 
+}
+
+div {
+  width: 1467px;
+  height: 120px;
+  left: 70px;
+
 }
